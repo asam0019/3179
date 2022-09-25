@@ -4,31 +4,38 @@
   "width": 800,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/E_VIC21_region.json",
+    "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/js/E_VIC21_region.json",
     "format": {"type": "topojson", "feature": "E_VIC21_region"}
   },
-  "projection": {"type":"conicEqualArea", "scale":6000,
-               "center":[79,-17],"rotate":[-46.5,29,19]
-              },
+  "projection": {
+    "type": "conicEqualArea",
+    "scale": 6000,
+    "center": [79, -17],
+    "rotate": [-46.5, 29, 19]
+  },
   "transform": [
     {
       "lookup": "properties.Elect_div",
       "from": {
-        "data": {"url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/results.csv"},
+        "data": {
+          "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/data/results.csv"
+        },
         "key": "Electorate",
         "fields": ["Party"]
       }
     },
     {"calculate": "datum.Party", "as": "Party"}
   ],
-  "mark": {"type": "geoshape","stroke": "white"},
+  "mark": {"type": "geoshape", "stroke": "white"},
   "encoding": {
-    "color": {"field": "Party", 
-    "type": "nominal",
-    "scale": {
-"domain": ["LNP", "ALP", "Independent", "Greens"],
-"range": ["#0099ff", "#ff0000", "#8300ff", "#4fff00"]
-}},
+    "color": {
+      "field": "Party",
+      "type": "nominal",
+      "scale": {
+        "domain": ["LNP", "ALP", "Independent", "Greens"],
+        "range": ["#0099ff", "#ff0000", "#8300ff", "#4fff00"]
+      }
+    },
     "tooltip": [
       {
         "field": "properties.Elect_div",
@@ -38,5 +45,4 @@
       {"field": "Party", "type": "nominal"}
     ]
   }
-  
 }
