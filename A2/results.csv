@@ -1,40 +1,40 @@
 Electorate,State,Party,Margin
-Aston,VIC,Liberal,5520
-Ballarat,VIC,Australian Labor Party,25040
-Bendigo,VIC,Australian Labor Party,24157
-Bruce,VIC,Australian Labor Party,12550
-Calwell,VIC,Australian Labor Party,21069
-Casey,VIC,Liberal,2945
-Chisholm,VIC,Australian Labor Party,12378
-Cooper,VIC,Australian Labor Party,16262
-Corangamite,VIC,Australian Labor Party,15353
-Corio,VIC,Australian Labor Party,24894
-Deakin,VIC,Liberal,375
-Dunkley,VIC,Australian Labor Party,12008
-Flinders,VIC,Liberal,13248
-Fraser,VIC,Australian Labor Party,30401
-Gellibrand,VIC,Australian Labor Party,21279
-Gippsland,VIC,The Nationals,41504
-Goldstein,VIC,Independent,5635
-Gorton,VIC,Australian Labor Party,18434
-Hawke,VIC,Australian Labor Party,13298
-Higgins,VIC,Australian Labor Party,3941
-Holt,VIC,Australian Labor Party,12658
-Hotham,VIC,Australian Labor Party,28562
-Indi,VIC,Independent,18158
-Isaacs,VIC,Australian Labor Party,13452
-Jagajaga,VIC,Australian Labor Party,25001
-Kooyong,VIC,Independent,6035
-La Trobe,VIC,Liberal,15934
-Lalor,VIC,Australian Labor Party,22704
-Macnamara,VIC,Australian Labor Party,22791
-Mallee,VIC,The Nationals,38817
-Maribyrnong,VIC,Australian Labor Party,23390
-McEwen,VIC,Australian Labor Party,6277
-Melbourne,VIC,The Greens,19594
-Menzies,VIC,Liberal,1377
-Monash,VIC,Liberal,5600
-Nicholls,VIC,The Nationals,7251
-Scullin,VIC,Australian Labor Party,28400
-Wannon,VIC,Liberal,7933
-Wills,VIC,Australian Labor Party,15632
+Aston,VIC,0,5520
+Ballarat,VIC,1,25040
+Bendigo,VIC,1,24157
+Bruce,VIC,1,12550
+Calwell,VIC,1,21069
+Casey,VIC,0,2945
+Chisholm,VIC,1,12378
+Cooper,VIC,1,16262
+Corangamite,VIC,1,15353
+Corio,VIC,1,24894
+Deakin,VIC,0,375
+Dunkley,VIC,1,12008
+Flinders,VIC,0,13248
+Fraser,VIC,1,30401
+Gellibrand,VIC,1,21279
+Gippsland,VIC,0,41504
+Goldstein,VIC,2,5635
+Gorton,VIC,1,18434
+Hawke,VIC,1,13298
+Higgins,VIC,1,3941
+Holt,VIC,1,12658
+Hotham,VIC,1,28562
+Indi,VIC,2,18158
+Isaacs,VIC,1,13452
+Jagajaga,VIC,1,25001
+Kooyong,VIC,2,6035
+La Trobe,VIC,0,15934
+Lalor,VIC,1,22704
+Macnamara,VIC,1,22791
+Mallee,VIC,0,38817
+Maribyrnong,VIC,1,23390
+McEwen,VIC,1,6277
+Melbourne,VIC,3,19594
+Menzies,VIC,0,1377
+Monash,VIC,0,5600
+Nicholls,VIC,0,7251
+Scullin,VIC,1,28400
+Wannon,VIC,0,7933
+Wills,VIC,1,15632
