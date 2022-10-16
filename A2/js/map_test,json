@@ -1,0 +1,96 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Victorian Electorates",
+    "projection": {
+        "type": "conicEqualArea",
+        "scale": 6000,
+        "center": [
+            79,
+            -17
+        ],
+        "rotate": [
+            -46.5,
+            29,
+            19
+        ]
+    },
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/js/E_VIC21_region.json",
+                "format": {
+                    "type": "topojson",
+                    "feature": "E_VIC21_region"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "stroke": "white"
+            },
+            "transform": [
+                {
+                    "lookup": "properties.Elect_div",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/data/results.csv"
+                        },
+                        "key": "Electorate",
+                        "fields": [
+                            "Party"
+                        ]
+                    }
+                },
+                {
+                    "calculate": "datum.Party",
+                    "as": "Party"
+                }
+            ],
+            "encoding": {
+                "color": {
+                    "field": "Party",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "LNP",
+                            "ALP",
+                            "Independent",
+                            "Greens"
+                        ],
+                        "range": [
+                            "#0099ff",
+                            "#ff0000",
+                            "#8300ff",
+                            "#4fff00"
+                        ]
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "properties.Elect_div",
+                        "type": "nominal",
+                        "title": "Electorate"
+                    },
+                    {
+                        "field": "Party",
+                        "type": "nominal"
+                    }
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/data/median.csv"
+            },
+            "mark": {
+                "type": "circle", "tooltip":{"content": "data"}
+            },
+           "encoding": {"longitude":{"field":"longitude", "type": "quantitative"}, 
+                        "latitude":{"field":"latitude", "type": "quantitative"},
+                    "size":{"field":"median", "type": "quantitative", 
+                    "title":"Median Weekly Household Income"}
+                } 
+        }
+    ]
+}
