@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Percentage of Metropolitan Ciculation across Australia",
+    "data": {
+      "values": [
+        {"Category": "Murdoch Owned", "value": 64.2},
+        {"Category": "Other", "value": 35.8}
+      ]
+    },
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "value", "type": "quantitative"},
+      "color": {"field": "Category", "type": "nominal"},
+      "tooltip": [
+        {
+          "field": "Category",
+          "type": "nominal",
+          "title": "Category"
+        },
+        {"field": "value", "type": "quantitative"}
+      ]
+    }
+    
+  }

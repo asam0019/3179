@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Average of median weekly household income for Labor and Liberal",
+    "data": {
+      "url": "https://raw.githubusercontent.com/asam0019/3179/main/A2/data/average_income.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "party", "type": "nominal"},
+      "y": {"field": "average", "type": "quantitative", "axis":{"title":"Average of median weekly household income"}},
+      "color": {"field": "party", "type": "nominal","scale": {
+        "domain": ["LNP", "ALP"],
+        "range": ["#0099ff", "#ff0000"]}},
+      "tooltip": [
+        {
+          "field": "party",
+          "type": "nominal",
+          "title": "party"
+        },
+        {"field": "average", "type": "quantitative"}
+      ]
+    }
+    
+  }

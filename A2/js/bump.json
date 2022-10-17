@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Bump chart",
+    "data": {
+      "values": [
+        {"year": 1993, "result": "ALP"},
+        {"year": 1996, "result": "LNP"},
+        {"year": 1998, "result": "LNP"},
+        {"year": 2001, "result": "LNP"},
+        {"year": 2004, "result": "LNP"},
+        {"year": 2007, "result": "ALP"},
+        {"year": 2010, "result": "ALP"},
+        {"year": 2013, "result": "LNP"},
+        {"year": 2016, "result": "LNP"}
+      ]
+    },
+    "mark": {"type": "line", "point": true},
+    "encoding": {
+      "x": {"field": "year", "type": "quantitative", "scale":{"domain":[1992,2017]}},
+      "y": {"field": "result", "type": "nominal"},
+      "order": {"field": "year", "type": "quantitative"}
+    }
+  }
+  

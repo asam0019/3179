@@ -12,6 +12,7 @@
     "scale": 6000,
     "center": [79, -17],
     "rotate": [-46.5, 29, 19]
+
   },
   "transform": [
     {
@@ -33,7 +34,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["LNP", "ALP", "Independent", "Greens"],
-        "range": ["#0099ff", "#ff0000", "#8300ff", "#4fff00"]
+        "range": ["#0099ff", "#ff0000", "#8300ff", "#000000"]
       }
     },
     "tooltip": [

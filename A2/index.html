@@ -2,29 +2,72 @@
 <html>
 
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <title> Australian Federal Elections and Murdoch Owned Media</title>
 
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
 </head>
+<style> body {
+    background-image: url("data/1.png");
+    background-color: #cccccc;
+  }</style>
 
 <body>
-
-    <div id="map"></div>
+    <div id="body">
+    <h1>Australian Federal Elections Statistics and Murdoch Owned Media</h1>
+    <p>This map shows the Victorian electorates and the median weekly household income</p>
+    <div id="map_test"> 
+    </div>
+    <p>From the map, we can see that in general, the more rural electorates vote for Liberal and the electorates that are more urban tend to vote more for Labor.
+    </p>
+    <h2>Australia as a whole</h2>
+    <div id="bar"></div>
+    <div style="position:relative; left:1045px; top:-510px; right:0px; width:400px;">
+    <p>This chart shows the average of the median weekly household income for all the electorates in Victoria.
+        It shows that on average, the electorates that voted for Labor have higher incomes
+    </p></div>
+    <div id="bump"></div>
+    <p style="position:relative; left:380px; top:-500px; right:0px; width:400px;">
+        This chart shows the overall election results for Australia from 1993 until 2016.</p>
+    <h2 style="position:relative ; top:-450px">Murdoch Media</h2>
+    <div id="pie"></div>
+    <p style="position:relative ; top:-450px; width:400px">This chart shows the dominance Rupert Murdoch's
+         corporations have on the Australian Mass Media platforms. It is for this reason that former Prime Minister Kevin Rudd
+        has been calling for a royal commission and created a petition that has since become Australia's biggest ever e-petition.</p>
+    
+    <!-- Embed the Vega Lite visualisations -->
 
     <script type="text/javascript">
-        var data_location = "data/results.csv"
+      
+        var pie = "js/pie.json"
 
+        vegaEmbed('#pie', pie).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
         // var spec2 = "js/stacked_bar_chart.vg.json";
-        var spec2 = "js/map.json"
+        var map_test = "js/map_test.json"
 
-        vegaEmbed('#map', spec2).then(function(result) {
+        vegaEmbed('#map_test', map_test).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+
+        var bar = "js/bar.json"
+        vegaEmbed('#bar', bar).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var bump = "js/bump.json"
+        vegaEmbed('#bump', bump).then(function(result) {}).catch(console.error);
+
     </script>
+    </div>
 
 </body>
 
